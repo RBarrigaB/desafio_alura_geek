@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -78,17 +81,19 @@
         <div class="form-container">
             <h3 id="agregarProductoTitulo"></h3>
             <form action="#" method="post">
-                <input type="text" name="name" placeholder="Nombre del producto" required>
-                <input type="number" name="price" placeholder="Precio" required>
-                <input type="text" name="description" placeholder="Descripción del producto" required>
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpiar</button>
+                <input type="text" name="name" id="nombreForm" required>
+                <input type="number" name="price" id="priceForm" required>
+                <input type="text" name="description" id="imagenForm" required>
+                <div class="botones-form">
+                    <button type="submit" class="buttons">Enviar</button>
+                    <button type="reset" class="buttons">Limpiar</button>
+                </div>
             </form>
         </div>
     </div>
 
     <footer>
-        <p>Copyright 2024 @ Reinaldo Barriga Bauden para Alura / Oracle One</p>
+        <p id="footer__copyright"></p>
     </footer>
     <script src="js/onInit.js"></script>
 </body>

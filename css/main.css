@@ -11,7 +11,7 @@ header {
     font-size: 1.5em;
 }
 footer {
-    background-color: #4CAF50;
+    background-color: #5d04d9;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -26,11 +26,15 @@ footer {
     height: calc(100vh - 160px);
     flex-grow: 1;
 }
+
 .cards-container-wrapper {
     flex: 1;
     overflow-y: auto;
     margin-right: 20px;
+    margin-top: 20px; /* Alinea verticalmente con el título del form */
+    position: relative; 
 }
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -69,8 +73,27 @@ footer {
     margin: 5px 0;
     font-size: 0.9em;
 }
+
+#misProductosTitulo, #agregarProductoTitulo {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 0 20px;
+    margin-top: 20px; 
+}
+
+#misProductosTitulo {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
 .form-container {
-    width: 30%; 
+    width: 20%; 
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -82,17 +105,23 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
+    border: none;
     padding: 15px;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    gap: 15px;
+    background-color: none;
 }
 input {
     margin-bottom: 10px;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #03318c;
+    border-radius: 20px;
 }
+
+input::placeholder {
+    color: #03318c;
+}
+
 button {
     padding: 10px;
     margin: 5px 0;
@@ -100,11 +129,29 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #03318c;
     color: white;
+    border: 2px ;
 }
 button[type="reset"] {
-    background-color: #f44336;
-    color: white;
+    background-color: whitesmoke;
+    color: #03318c;
+    border: 2px solid #03318c;
+}
+
+.botones-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.buttons {
+    flex: 1;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box; 
 }

@@ -1,5 +1,9 @@
 {
-    "titleHeader": "Alura geek",
+    "titleHeader": "Alura Geek",
     "misProductosTitulo": "Mis productos: ",
-    "agregarProductoTitulo": "Agregar producto: "
+    "agregarProductoTitulo": "Agregar\n\rProducto: ",
+    "nombreFormPlaceholder":"Nombre...",
+    "precioFormPlaceholder": "Precio...",
+    "imagenFormPlaceholder": "Imagen...",
+    "copyrightFooter": "Copyright © 2024. Desarrollado por: Reinaldo Barriga Bauden"
 }
