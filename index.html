@@ -12,69 +12,15 @@
 <body>
 
     <header>
-        <h1 id="title-header"></h1>
+        <h1 id="title-header"></h1><img class="alura_geek_logo">
     </header>
 
     <div class="container">
         <!-- Cards Section with Scroll -->
         <div class="cards-container-wrapper">
             <h3 id="misProductosTitulo"></h3>
-            <div class="cards-container">
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 1">
-                    <p>Producto 1</p>
-                    <p>$10.00</p>
-                </div>
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 2">
-                    <p>Producto 2</p>
-                    <p>$15.00</p>
-                </div>
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 3">
-                    <p>Producto 3</p>
-                    <p>$20.00</p>
-                </div>
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 3">
-                    <p>Producto 3</p>
-                    <p>$20.00</p>
-                </div>
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 3">
-                    <p>Producto 3</p>
-                    <p>$20.00</p>
-                </div>
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 3">
-                    <p>Producto 3</p>
-                    <p>$20.00</p>
-                </div>
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 3">
-                    <p>Producto 3</p>
-                    <p>$20.00</p>
-                </div>
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 3">
-                    <p>Producto 3</p>
-                    <p>$20.00</p>
-                </div>
-                <div class="card">
-                    <button class="delete-icon">&times;</button>
-                    <img src="https://via.placeholder.com/150" alt="Producto 3">
-                    <p>Producto 3</p>
-                    <p>$20.00</p>
-                </div>
-            </div>
+            <ul class="cards-container" productos-lista>
+            </ul>
         </div>
 
         <!-- Form Section -->
@@ -85,16 +31,22 @@
                 <input type="number" name="price" id="priceForm" required>
                 <input type="text" name="description" id="imagenForm" required>
                 <div class="botones-form">
-                    <button type="submit" class="buttons">Enviar</button>
-                    <button type="reset" class="buttons">Limpiar</button>
+                    <button type="submit" class="buttons" id="submit__btn"></button>
+                    <button type="reset" class="buttons" id="reset__btn"></button>
                 </div>
             </form>
         </div>
     </div>
 
     <footer>
+        <div id="footer__title__img">
+            <p id="footer__title"></p><img class="alura_geek_logo">
+        </div>
         <p id="footer__copyright"></p>
+        <p id="footer__alura__msg"></p>
     </footer>
     <script src="js/onInit.js"></script>
+    <script type="module" src="js/productos.js"></script>
+    <script type="module" src="js/prod_crud.js"></script>
 </body>
 </html>

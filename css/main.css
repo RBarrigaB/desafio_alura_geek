@@ -3,22 +3,24 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh; 
 }
+
 header {
     background-color: #5d04d9;
     color: white;
     text-align: center;
     padding: 1em 0;
     font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
-footer {
-    background-color: #5d04d9;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+
+.alura_geek_logo {
+    height: 2em;
+    object-fit: contain;
 }
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -154,4 +156,37 @@ button[type="reset"] {
     padding: 10px;
     margin: 0;
     box-sizing: border-box; 
+}
+
+/* footer */
+footer {
+    background-color: #5d04d9;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img {
+    height: 1em;
+}
+
+#footer__title__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+#footer__title {
+    margin: 0; 
+}
+
+#footer__copyright {
+    margin: 0; 
+    padding-top: 0.4em; 
+    font-size: 1em; 
 }

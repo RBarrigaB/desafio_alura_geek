@@ -1,0 +1,9 @@
+{
+  "productos": [
+    {
+      "titulo": "Producto 1",
+      "precio": "100",
+      "path": "img/productos/mouse.jpg"
+    }
+  ]
+}

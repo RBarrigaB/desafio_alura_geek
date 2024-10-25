@@ -1,0 +1,14 @@
+{
+  "name": "alura_geek_desafio",
+  "version": "1.0.0",
+  "description": "Producto para administar videos, desafío alura geek",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reinaldo Barriga Bauden",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

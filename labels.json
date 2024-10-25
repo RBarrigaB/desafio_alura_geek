@@ -5,5 +5,9 @@
     "nombreFormPlaceholder":"Nombre...",
     "precioFormPlaceholder": "Precio...",
     "imagenFormPlaceholder": "Imagen...",
+    "submitBtn": "Enviar",
+    "resetBtn":"Limpiar",
+    "srcHeaderImg":"img/logo/alura_geek_logo.png",
+    "footerAluraMsg": "ALURA LATAM - 2024",
     "copyrightFooter": "Copyright © 2024. Desarrollado por: Reinaldo Barriga Bauden"
 }
