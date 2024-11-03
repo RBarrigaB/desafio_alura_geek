@@ -2,6 +2,8 @@ import { listarProductos, crearProducto, eliminarProducto } from "../js/api.js";
 
 const listaProductos = document.querySelector("[productos-lista]");
 const formProducto = document.getElementById("form-producto");
+const resetBtn = document.getElementById("reset__btn");
+const jsonLabels = fetch("../labels.json").then((response) => response.json());
 
 const crearCard = (id, titulo, precio, path) => {
   const producto = document.createElement("li");
@@ -40,10 +42,16 @@ formProducto.addEventListener("submit", async (event) => {
     const { name, price, image } = nuevoProducto;
     listaProductos.appendChild(crearCard(name, price, image));
     formProducto.reset();
+    mostrarPopupExito("crear");
   } catch (error) {
+    mostrarPopupFallido("crear");
     console.error("Creación de producto fallida", error);
   }
 });
+
+resetBtn.addEventListener("click", async () => {
+  formProducto.reset();
+})
 
 document.addEventListener("DOMContentLoaded", () => {
   mostrarProductos();
@@ -55,8 +63,44 @@ window.eliminarProd = async (id,name) => {
     try {
       await eliminarProducto(id);
       mostrarProductos();
+      mostrarPopupExito("eliminar");
     } catch (error) {
+      mostrarPopupFallido("eliminar");
       console.error("Error al eliminar el producto: ", error);
     }
   }
 };
+
+const mostrarPopupExito = async (accion) => {
+  const popup = document.getElementById("successPopup");
+
+   await jsonLabels.then((data => {
+      popup.innerHTML = (accion === "crear")
+      ? data.productoCreadoExitosamente
+      : (accion === "eliminar") ? data.productoEliminadoExitosamente
+      : "";
+    }));
+ 
+  popup.classList.add("show");
+  
+  setTimeout(() => {
+      popup.classList.remove("show");
+  }, 8000);
+}
+
+const mostrarPopupFallido = async (accion) => {
+  const popup = document.getElementById("failedPopup");
+
+ await jsonLabels.then((data => {
+    popup.innerHTML = (accion === "crear")
+    ? data.productoCreadoFallido
+    : (accion === "eliminar") ? data.productoEliminadoFallido
+    : "";
+  }));
+  
+  popup.classList.add("show");
+  
+  setTimeout(() => {
+      popup.classList.remove("show");
+  }, 8000);
+}

@@ -1,5 +1,4 @@
 window.onload = function () {
-
   let titleHeader = document.getElementById("title-header");
   let misProductosTitulo = document.getElementById("misProductosTitulo");
   let agregarProductoTitulo = document.getElementById("agregarProductoTitulo");
@@ -12,13 +11,14 @@ window.onload = function () {
   let footerCopyright = document.getElementById("footer__copyright");
   let footerAluraMsg = document.getElementById("footer__alura__msg");
   let imgAluraGeek = document.querySelectorAll(".alura_geek_logo");
+  let imgFormText = document.getElementById("imagenFormText");
 
   fetch("../labels.json")
     .then((response) => response.json()) // Convierte la respuesta en formato JSON
     .then((data) => {
       titleHeader.innerHTML = data.titleHeader;
       misProductosTitulo.innerHTML = data.misProductosTitulo;
-      agregarProductoTitulo.innerHTML = data.agregarProductoTitulo;  
+      agregarProductoTitulo.innerHTML = data.agregarProductoTitulo;
       nombreForm.placeholder = data.nombreFormPlaceholder;
       priceForm.placeholder = data.precioFormPlaceholder;
       submitBtn.innerHTML = data.submitBtn;
@@ -29,18 +29,25 @@ window.onload = function () {
       footerAluraMsg.innerHTML = data.footerAluraMsg;
       imgAluraGeek.forEach((img) => {
         img.src = data.srcHeaderImg;
-      })
-      document.getElementById('files').addEventListener('change', function(event) {
-        const file = event.target.files[0];
-    
-        if (file) {
+      });
+      document
+        .getElementById("files")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          imgFormText.innerHTML = data.imagenFormPlaceholder;
+
+          if (file) {
             const fileName = file.name;
             const path = `img/productos/${fileName}`;
-            document.getElementById('imagenFormText').innerHTML = path;
-        } else {
-            document.getElementById('imagenFormText').innerHTML = data.imagenFormPlaceholder;
-        }
-    });
+            imgFormText.innerHTML = path;
+          } else {
+            imgFormText.innerHTML = data.imagenFormPlaceholder;
+          }
+        });
+
+        resetBtn.addEventListener("click", () => {
+          imgFormText.innerHTML = data.imagenFormPlaceholder;
+        });
     })
     .catch((error) => {
       alert.error("Error al cargar los datos:", error);

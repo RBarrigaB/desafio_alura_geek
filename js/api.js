@@ -1,4 +1,4 @@
-// api.js
+
 export async function listarProductos() {
     const response = await fetch("http://localhost:3001/productos");
     if (!response.ok) throw new Error("Error al listar productos");

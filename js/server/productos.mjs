@@ -89,8 +89,7 @@ app.delete("/productos/:id", async (req, res) => {
         console.error("Error al eliminar la imagen:", err);
       }
     });
-
-    // Ahora eliminamos el producto de json-server
+    
     const response = await fetch(`http://localhost:3001/productos/${id}`, {
       method: "DELETE",
     });

@@ -9,5 +9,9 @@
     "resetBtn":"Limpiar",
     "srcHeaderImg":"img/logo/alura_geek_logo.png",
     "footerAluraMsg": "ALURA LATAM - 2024",
-    "copyrightFooter": "Copyright © 2024. Desarrollado por: Reinaldo Barriga Bauden"
+    "copyrightFooter": "Copyright © 2024. Desarrollado por: Reinaldo Barriga Bauden",
+    "productoCreadoExitosamente": "Producto creado exitosamente",
+    "productoCreadoFallido": "Error al crear el producto",
+    "productoEliminadoExitosamente":"Producto eliminado exitosamente",
+    "productoEliminadoFallido": "Error al eliminar el producto"
 }
