@@ -44,36 +44,53 @@ header {
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
+    list-style-type: none; 
 }
 .card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
+    padding: 5%;
     text-align: center;
     box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
     position: relative;
-    width: 80%; 
-    height: 200px; 
+    width: 85%; 
+    height: 80%; 
+    background-color: #5d04d9;
 }
+
 .card img {
-    max-width: 100%;
+    width: 80%; /* Ajusta según el tamaño deseado */
+    height: 100px; /* Ajusta según el tamaño deseado */
+    object-fit: contain; /* La imagen se ajustará dentro del contenedor sin recortarse */
     border-radius: 8px;
-    height: 80px;
+    border: 2px solid black;
+    background-color: white;
 }
+
 .card .delete-icon {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: red;
+    bottom:10px;
+    right: 15px;
+    background-color: transparent;
     color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 60%;
     padding: 5px;
     cursor: pointer;
 }
-.card p {
+
+.card p:nth-child(3) {
     margin: 5px 0;
-    font-size: 0.9em;
+    font-size: 1.2em;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card p:nth-child(4) {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #misProductosTitulo, #agregarProductoTitulo {
@@ -113,7 +130,36 @@ form {
     gap: 15px;
     background-color: none;
 }
-input {
+
+#imagenForm {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    width: 92%;
+    height: 7%;
+}
+
+#imagenFormText {
+    display: inline-block; 
+    width: 100%; 
+    padding: 8px; 
+    cursor: pointer; 
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #03318c; 
+}
+
+.btn {
+    background-color: transparent; 
+    color: black;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    display: inline-block; 
+}
+
+input, #imagenForm {
     margin-bottom: 10px;
     padding: 8px;
     border: 2px solid #03318c;
@@ -122,6 +168,9 @@ input {
 
 input::placeholder {
     color: #03318c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 8px; 
 }
 
 button {
@@ -189,4 +238,8 @@ footer img {
     margin: 0; 
     padding-top: 0.4em; 
     font-size: 1em; 
+}
+
+.container {
+    margin: 5%;
 }

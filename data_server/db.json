@@ -1,9 +1,28 @@
 {
   "productos": [
     {
-      "titulo": "Producto 1",
-      "precio": "100",
-      "path": "img/productos/mouse.jpg"
+      "id": "1",
+      "name": "Mouse",
+      "price": "300",
+      "image": "img/productos/mouse.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Teclado",
+      "price": "200",
+      "image": "img/productos/teclado.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Audífonos",
+      "price": "500",
+      "image": "img/productos/audifonos.png"
+    },
+    {
+      "id": "4",
+      "name": "Monitor",
+      "price": "1000",
+      "image": "img/productos/monitor.jpg"
     }
   ]
 }

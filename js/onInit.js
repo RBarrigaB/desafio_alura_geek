@@ -7,7 +7,7 @@ window.onload = function () {
   let priceForm = document.getElementById("priceForm");
   let submitBtn = document.getElementById("submit__btn");
   let resetBtn = document.getElementById("reset__btn");
-  let imagenForm = document.getElementById("imagenForm");
+  let imagenForm = document.getElementById("imagenFormText");
   let footerTitle = document.getElementById("footer__title");
   let footerCopyright = document.getElementById("footer__copyright");
   let footerAluraMsg = document.getElementById("footer__alura__msg");
@@ -23,13 +23,24 @@ window.onload = function () {
       priceForm.placeholder = data.precioFormPlaceholder;
       submitBtn.innerHTML = data.submitBtn;
       resetBtn.innerHTML = data.resetBtn;
-      imagenForm.placeholder = data.imagenFormPlaceholder;
+      imagenForm.innerHTML = data.imagenFormPlaceholder;
       footerTitle.innerHTML = data.titleHeader;
       footerCopyright.innerHTML = data.copyrightFooter;
       footerAluraMsg.innerHTML = data.footerAluraMsg;
       imgAluraGeek.forEach((img) => {
         img.src = data.srcHeaderImg;
       })
+      document.getElementById('files').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+    
+        if (file) {
+            const fileName = file.name;
+            const path = `img/productos/${fileName}`;
+            document.getElementById('imagenFormText').innerHTML = path;
+        } else {
+            document.getElementById('imagenFormText').innerHTML = data.imagenFormPlaceholder;
+        }
+    });
     })
     .catch((error) => {
       alert.error("Error al cargar los datos:", error);

@@ -9,6 +9,10 @@
   "author": "Reinaldo Barriga Bauden",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^1.0.0-beta.3"
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "json-server": "^1.0.0-beta.3",
+    "multer": "^1.4.5-lts.1"
   }
 }
