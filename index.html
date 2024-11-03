@@ -31,15 +31,22 @@
             <h3 id="agregarProductoTitulo"></h3>
             <form id="form-producto">
                 <input type="text" name="name" id="nombreForm" required>
+                <div id="nameError" class="error-message"></div>
+                
                 <input type="number" name="price" id="priceForm" required>
+                <div id="priceError" class="error-message"></div>
+                
                 <div id="imagenForm">
                     <label for="files" class="btn" id="imagenFormText"></label>
-                    <input id="files" style="display:none;" type="file" accept="image/*" name="image" required>
+                    <input id="files" type="file" accept="image/*" name="image" required>
                 </div>
+                <div id="imageError" class="error-message"></div>
+                
                 <div class="botones-form">
                     <button type="submit" class="buttons" id="submit__btn"></button>
                     <button type="reset" class="buttons" id="reset__btn"></button>
                 </div>
+                
                 <div id="successPopup" class="popup"></div>
                 <div id="failedPopup" class="popup"></div>
             </form>

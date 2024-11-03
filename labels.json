@@ -13,5 +13,8 @@
     "productoCreadoExitosamente": "Producto creado exitosamente",
     "productoCreadoFallido": "Error al crear el producto",
     "productoEliminadoExitosamente":"Producto eliminado exitosamente",
-    "productoEliminadoFallido": "Error al eliminar el producto"
+    "productoEliminadoFallido": "Error al eliminar el producto",
+    "invalidFormName":"El nombre debe ser un texto válido.",
+    "InvalidFormPrice": "El precio debe ser un número válido y mayor que cero.",
+    "invalidFormImage": "Por favor, selecciona una imagen en formato JPG,JPEG,PNG,GIF,BMP,TIFF o WEBP"
 }

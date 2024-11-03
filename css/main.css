@@ -329,12 +329,12 @@ footer img {
   }
 
   .cards-container {
-    grid-template-columns: 1fr; /* Una sola columna para diseño vertical */
-    grid-gap: 15px; /* Espaciado entre las tarjetas */
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
     padding: 10px;
-    max-height: 400px; /* Limita la altura para scroll */
+    max-height: 400px;
     overflow-y: auto;
-    background-color: #f1f1f1; /* Fondo opcional */
+    background-color: #f1f1f1; 
     border-radius: 8px;
   }
 
@@ -349,4 +349,13 @@ footer img {
     margin-right: 15px;
     bottom: 15px;
   }
+}
+
+.error-message {
+  color: red;
+  display: none;
+}
+
+#files {
+  opacity: 0;
 }
